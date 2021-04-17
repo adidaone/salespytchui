@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Home page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="Content/loading-bar.css" rel="stylesheet" type="text/css" />
+    <link href="styles/initcarousel-1.css" rel="stylesheet" type="text/css" />
+    <link href="styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/dirPagination.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/loading-bar.js"></script>
+    <script src="Scripts/amazingcarousel.js"></script>
+    <script src="Scripts/initcarousel-1.js"></script>
+    <script src="Scripts/script.js"></script>
+
+</head>
+<body ng-app="salespytchapp">
+    <salespytchheader></salespytchheader>
+    <salespytchheadermenu></salespytchheadermenu>
+    <div ng-view></div>
+    <salespytchfootermenu></salespytchfootermenu>
+    <salespytchfooter></salespytchfooter>
+    <!--Vendor Scripts-->
+  
+
+    <script src="src/common/header/header.module.js"></script>
+    <script src="src/common/header/header.directive.js"></script>
+    <script src="src/common/header/headermenu.directive.js"></script>
+    <script src="src/common/footer/footer.module.js"></script>
+    <script src="src/common/footer/footer.directive.js"></script>
+    <script src="src/common/footer/footermenu.directive.js"></script>
+    <script src="src/anonymoususer/registration/registration.module.js"></script>
+    <script src="src/common/api-services/api-services.module.js"></script>
+    <script src="src/common/opportunities/opportunities.module.js"></script>
+    <script src="app.module.js"></script>
+</body>
+
+</html>
