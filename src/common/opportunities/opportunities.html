@@ -1,0 +1,175 @@
+﻿<div class="container-fluid dboard-breadcums">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="dboard-breadcums-rm"><i class="fa fa-home" aria-hidden="true"></i> <img src="images/breadc-arr.png" alt="breadc-arr" />Opportunities </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- content starts-->
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="opp-title">
+                    Opportunities ({{opportunities.totalOpportunitues}})
+                    <div class="opp-row2" style="left:275px;">
+                        <div class="drop">
+                            <select class="select2" ng-model="opportunities.filterByCategory" ng-change="opportunities.filterByCategories()" 
+                                    ng-options="filterByCategoryOption.Value as filterByCategoryOption.Category  for filterByCategoryOption in opportunities.filterByCategoryOptions">                               
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+                        <div class="drop">
+                            <select class="select2" ng-model="opportunities.pageSize" ng-options="pageSizeOption.Value as pageSizeOption.DisplayText for pageSizeOption in opportunities.pageSizeOptions">                               
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+                        <div class="opp-search">
+                            <input type="search" ng-model="opportunities.searchText" placeholder="Search">
+                        </div>
+                    </div>
+                </div>
+                <div class="pfo-content">   
+                    <div class="pfo-row1" dir-paginate="opportunity in opportunities.opportunities | filter:opportunities.searchText  | itemsPerPage : opportunities.pageSize">
+                        <span class="col1"><img src="./data/{{opportunity.ProductImages[0].ProductImage}}.jpg"></span>
+                        <div class="col2 align">
+                            <h3>{{opportunity.ProductName}}</h3>
+                            <p>{{opportunity.Description}}</p>
+                            <p>
+                                Price: <a href="" class="pro_bold">{{opportunity.Price}}</a>  &nbsp; &nbsp;
+                                Commission: <a href="" class="pro_bold">{{opportunity.Commission}}</a>
+                            </p>
+                        </div>
+                        <div class="col7">
+                            <a href="" ng-click="opportunities.viewOpportunity(opportunity)" class="btn btn-success">View Opportunity</a>
+                            <a href="" ng-click="opportunities.agentRequestForOpportunity(opportunity)" class="btn btn-info">Apply Now</a>
+                        </div>
+                    </div>
+                    <dir-pagination-controls class="pfo-row5 sp-pagination" boundary-links="true" template-url="Scripts/dirPagination.tpl.html"></dir-pagination-controls>         
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal three -->
+<div id="opportunityModal" class="modal fade sp-modal" role="dialog">
+    <div class="modal-dialog modal-md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close close_1" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{{opportunity.ProductName}} Overview</h4>
+            </div>
+            <div class="modal-body pp-overview">
+                <div class="row2">
+                    <div class="col1"> <img src="./data/{{opportunity.ProductImages[0].ProductImage}}.jpg" /> </div>
+                    <div class="col2">
+                        <div class="row3">
+                            <span class="col3 clr-red"><img src="images/icn-7.png" /> {{opportunity.Price}}</span>
+                            <span class="col4"><img src="images/icn-7.png" /> {{opportunity.Commission}}</span>
+                        </div>
+                        <div class="row3">
+                            <span class="col3"><img src="images/icn-8.png" /> $ {{opportunity.ProductCategory}}</span>
+                            <span class="col4"><img src="images/icn-9.png" /> {{opportunity.ProductSubCategory}}</span>
+                        </div>
+                        <p><b>Description</b></p>
+                        <p>{{opportunity.Description}} </p>
+                    </div>
+                </div>
+           
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                <div class="modal-but"><a class="btn btn-info" href="">Apply Now</a>  </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal three Ends -->
+
+<div id="agentRequestForOpportunity" class="modal fade sp-modal" role="dialog">
+    <div class="modal-dialog modal-md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close close_1" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Agent Request to Company</h4>
+            </div>
+            <div class="modal-body">
+                <div class="modal-row1">
+                    <div class="col1 one">
+                        <ul>
+                            <li>
+                                <label class="sp-lbl">Zip  Code :</label>
+                                <span class="sp-span">
+                                    <input type="text" class="form-control">
+                                </span>
+                            </li>
+                            <li>
+                                <label class="sp-lbl">State :</label>
+                                <span class="sp-span">
+                                    <input type="text" class="form-control">
+                                </span>
+                            </li>
+                            <li>
+                                <label class="sp-lbl">State :</label>
+                                <span class="sp-span">
+                                    <input type="text" class="form-control">
+                                </span>
+                            </li>
+                            <li>
+                                <label class="sp-lbl">State :</label>
+                                <span class="sp-span">
+                                    <input type="text" class="form-control">
+                                </span>
+                            </li>
+                            <li>
+                                <label class="sp-lbl">Existing network :</label>
+                                <div class="sp-span">
+                                    <div class="radio-align-2">
+                                        <input type="radio" id="creat-a">
+                                        <span for="creat-a"> &nbsp; Yes </span>
+                                    </div>
+                                    <div class="radio-align-2">
+                                        <input type="radio" id="creat-b">
+                                        <span for="creat-b"> &nbsp; No </span>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col1 align">
+                        <ul>
+                            <li>
+                                <label class="sp-lbl">Why this Product :</label>
+                                <span class="sp-span">
+                                    <textarea class="form-control"></textarea>
+                                </span>
+                            </li>
+                            <li>
+                                <label class="sp-lbl">Zip  Code :</label>
+                                <span class="sp-span">
+                                    <input type="text" class="form-control">
+                                </span>
+                            </li>
+                            <li>
+                                <label class="sp-lbl">City :</label>
+                                <span class="sp-span">
+                                    <textarea class="form-control"></textarea>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                <div class="modal-but"><a class="btn btn-info" href="">Apply</a> <a class="btn btn-warning" href="">Cancel</a> </div>
+            </div>
+        </div>
+    </div>
+</div>

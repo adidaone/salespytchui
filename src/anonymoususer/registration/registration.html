@@ -1,0 +1,78 @@
+﻿
+<div class="container-fluid dboard-breadcums">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="dboard-breadcums-rm"><i class="fa fa-home" aria-hidden="true"></i> <img src="images/breadc-arr.png" alt="breadc-arr" /> {{registration.userType}} Registration </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="displayMessage.show" ng-class="displayMessage.className">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="custom-bullet">                
+                <li ng-repeat="displayMessageText in displayMessage.displayTexts">{{displayMessageText}}</li></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- content starts-->
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="rg-title">New User Registration</h2>
+                <div class="rg-content">
+                    <div class="rg-row1">
+                        <div class="col1">
+                            <p class="pro_bold">Work with us one-to-one on your sales opportunity, access our free resources and trial the SalesPytch sales platform.</p>
+                            <p class="pro_bold">Account Criteris</p>
+                            <p>Your products/services must represent a minimum average deal value of over $5,000 or a minimum monthly recurring deal value of $500. (please only focus your sales opportunity on the products or services that meet this criteria).</p>
+                            <p>Not Sure <a href="#" class="pro_bold">Chat with us</a> we're here to help you.</p>
+                            <p class="pro_bold five">
+                                Do you have all the information you require? <br />
+                                <a href="#/pricing">Pricing  </a> </br >
+                                <a href="#/companyviewmore">Learn more about SalesPytch for Companies </a> </br >
+                                <a href="#">Faq's </a> </br >
+                            </p>
+                        </div>
+                        <div class="col2">
+                            <div class="rg-row2">
+                                <div class="radio-align-1">
+                                    <input type="radio" name="optradio" ng-value="const_BusinessOwner" ng-Model="registration.userType" ng-change="registration.userTypeChange">
+                                    <span for="creat-gf"> </span>
+                                </div>
+                                <h3><img src="images/icn-4.png" /> &nbsp;BUSINESS OWNER </h3>
+                                <div class="radio-align-1 align">
+                                    <input type="radio" name="optradio" ng-value="const_SalesPerson" ng-Model="registration.userType" ng-change="registration.userTypeChange">
+                                    <span for="creat-gf"> </span>
+                                </div>
+                                <h3><img src="images/icn-5.png" /> &nbsp;SALES AGENT </h3>
+                            </div>
+                            <ul class="rg-row3">
+                                <li> <input type="text" class="form-control" ng-model="registration.userName" placeholder="Username" style="height:60px; border-radius:5px;"></li>
+                                <li><input type="password" class="form-control" ng-model="registration.password" placeholder="Password" style="height:60px; border-radius:5px;"></li>
+                                <li><input type="password" class="form-control" ng-model="registration.confirmPassword" placeholder="Confirm Password" style="height:60px; border-radius:5px;"></li>
+                                <li><input type="text" class="form-control " ng-model="registration.email" placeholder="Email" style="height:60px; border-radius:5px;"></li>
+                                <li><input type="text" class="form-control" ng-model="registration.mobileNumber" placeholder="Mobile Number" style="height:60px; border-radius:5px;">                </li>
+                                <li><a class="btn btn-info" ng-click="registration.save()" style="height:60px; border-radius:5px;">Save</a> </li>
+                            </ul>
+                            <div class="rg-row4">
+                                <p>
+                                    <div class="check-align-1">
+                                        <input type="checkbox" id="creat-gf">
+                                        <span for="creat-gf"> </span>
+                                    </div>
+                                    I agree, my company and the products/services we sell represent a minimum average deal value of over $5,000 or a minimum monthly recurring deal value of $500 to join Salespytch By continuting you agree to our  <a href="#" class="pro_bold">Terms of Use</a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

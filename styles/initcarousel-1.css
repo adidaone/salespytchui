@@ -1,0 +1,118 @@
+/* content */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+#amazingcarousel-1 .amazingcarousel-image {	
+	position: relative;
+	padding: 0px;
+	width: 25%;
+	float: left;
+}
+
+#amazingcarousel-1 .amazingcarousel-image img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	border: 0;
+    margin: 20px 0;
+	padding: 0;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+
+#amazingcarousel-1 .amazingcarousel-text {
+	width: 75%;
+	float: left;
+	text-align: justify;
+}
+
+#amazingcarousel-1 blockquote {
+	font-size: 16px;
+	position: relative;
+	color: #fff;
+	text-align: left;
+	margin: 8px 18px 8px 24px;
+	border: none;
+	text-align: justify;
+	padding: 10px 0;	
+	font-style: normal;
+	font-weight: normal;	
+}
+
+
+#amazingcarousel-1  cite {
+	color: #fff;
+	font-size: 18px;
+	display: block;
+	position: relative;
+	margin: 4px 18px;
+	text-align: right;
+	font-style: normal;	
+	font-weight: normal;
+	}
+
+/* carousel */
+
+#amazingcarousel-container-1 {
+	padding: 32px 0px; 
+}
+
+#amazingcarousel-1 .amazingcarousel-list-container { 
+	padding: 16px 0;
+}
+
+/* item */
+
+#amazingcarousel-1 .amazingcarousel-item-container {
+	text-align: center;
+	padding: 6px;
+	float:left;
+}
+
+/* arrows */
+
+#amazingcarousel-1 .amazingcarousel-prev {
+	left: 0%;
+	top: 50%;
+	margin-left: -34px;
+	margin-top: -16px;
+}
+
+#amazingcarousel-1 .amazingcarousel-next {
+	right: 0%;
+	top: 50%;
+	margin-right: -16px;
+	margin-top: -16px;
+}
+
+/* navigation bullets */
+
+#amazingcarousel-1 .amazingcarousel-nav {
+	position: absolute;
+	width: 100%;
+	top: 100%;
+}
+
+#amazingcarousel-1 .amazingcarousel-bullet-wrapper {
+	margin: 4px auto;
+}
+
+
+.amazingcarousel-prev{background: transparent url("../images/prev.png") no-repeat scroll left top !important; background-size: 100% !important; display: block !important;}
+.amazingcarousel-next{background: transparent url("../images/next.png") no-repeat scroll left top !important; background-size: 100% !important; display: block !important;}
+.amazingcarousel-image div, .amazingcarousel-image div > a[target="_blank"]{display: none !important;}
+
+@media screen and (max-width:768px){
+#amazingcarousel-1 .amazingcarousel-prev {margin-left: -20px;}
+}
+@media screen and (max-width:568px){
+#amazingcarousel-1 .amazingcarousel-prev {margin-left: 0px;}
+#amazingcarousel-1 .amazingcarousel-next {margin-right: 0px;}
+
+#amazingcarousel-1 .amazingcarousel-image{ width:100%; text-align:center; }
+#amazingcarousel-1 .amazingcarousel-image img{ width:200px; display:inline-block; }
+#amazingcarousel-1 .amazingcarousel-text{ width:100%; }
+
+
+}	

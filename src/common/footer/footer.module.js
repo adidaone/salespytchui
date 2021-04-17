@@ -1,0 +1,1 @@
+﻿var footermodule = angular.module('footer.module', []);
